@@ -21,10 +21,10 @@ export default function Evolucoes() {
   console.log(parana)
 
   return (
-    <div>
+    <Suspense>
       <CardSection titulo={parana?.name}>
         <img src={parana?.sprites.front_default} alt={parana?.name} />
       </CardSection>
-    </div>
+    </Suspense>
   );
 };

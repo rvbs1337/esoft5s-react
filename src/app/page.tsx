@@ -3,6 +3,7 @@ import React from "react"
 import styles from "./page.module.css";
 import Header from "@/components/Header/Header";
 import CardSection from "@/components/CardSection/CardSection";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -81,7 +82,7 @@ export default function Home() {
         <CardSection titulo="Evoluções">
           <ul>
             <li>
-              <a href="./pages/pokemon/index.html?name=squirtle">
+              <Link href={{ pathname: '/evolucoes', query: { name: 'squirtle' } }}>
                 <figure>
                   <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png"
@@ -89,11 +90,11 @@ export default function Home() {
                   />
                   <figcaption>1. Squirtle</figcaption>
                 </figure>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="./pages/pokemon/index.html?name=wartortle">
+              <Link href={{ pathname: '/evolucoes', query: { name: 'wartortle' } }}>
                 <figure>
                   <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png"
@@ -101,11 +102,11 @@ export default function Home() {
                   />
                   <figcaption>2. Wartortle</figcaption>
                 </figure>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="./pages/pokemon/index.html?name=blastoise">
+              <Link href={{ pathname: '/evolucoes', query: { name: 'blastoise' } }}>
                 <figure>
                   <img
                     src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png"
@@ -113,7 +114,7 @@ export default function Home() {
                   />
                   <figcaption>3. Blastoise</figcaption>
                 </figure>
-              </a>
+              </Link>
             </li>
           </ul>
         </CardSection>

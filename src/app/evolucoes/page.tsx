@@ -1,6 +1,7 @@
 "use client";
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react';
+import { Suspense } from 'react'
 import CardSection from "@/components/CardSection/CardSection";
 
 export default function Evolucoes() {
@@ -15,7 +16,7 @@ export default function Evolucoes() {
     ).then((data) => {
       setparana(data);
     })
-  }, [])
+  }, [name])
 
   console.log(parana)
 
